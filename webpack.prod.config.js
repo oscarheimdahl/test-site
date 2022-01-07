@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   devtool: false,
   output: {
-    path: path.resolve(__dirname, '/'),
+    path: path.resolve(__dirname, './'),
     filename: 'bundle.js',
   },
   module: {
@@ -18,6 +18,5 @@ module.exports = {
       },
     ],
   },
-  devServer: {},
   plugins: [new HtmlWebpackPlugin()],
 };
