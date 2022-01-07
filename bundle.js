@@ -583,7 +583,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const h1 = document.createElement('h1');
-h1.innerText = 'Hejsan';
+h1.innerText = 'Chillin';
 
 const img = document.createElement('img');
 img.src = _assets_chillin_jpg__WEBPACK_IMPORTED_MODULE_0__;
