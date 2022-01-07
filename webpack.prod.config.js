@@ -7,15 +7,11 @@ module.exports = {
   mode: 'development',
   devtool: false,
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '/'),
     filename: 'bundle.js',
   },
   module: {
     rules: [
-      {
-        test: /\.(scss)$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
