@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 /** @type {import('@types/webpack').Configuration} */
 module.exports = {
   entry: './src/index.js',
-  mode: 'development',
+  mode: 'production',
   devtool: false,
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -12,6 +12,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
       {
         test: /\.(scss)$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
@@ -22,5 +27,6 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin()],
+  devServer: {},
+  plugins: [new HtmlWebpackPlugin({ template: './index.html' })],
 };

@@ -1,11 +1,16 @@
-import Chillin from './assets/chillin.jpg';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import App from './App.jsx';
 import './styles.scss';
 
-const h1 = document.createElement('h1');
-h1.innerText = 'Chillin';
+const appRouting = (
+  <Router>
+    <Routes>
+      <Route exact path='/' element={<App />} />
+    </Routes>
+  </Router>
+);
 
-const img = document.createElement('img');
-img.src = Chillin;
-
-document.querySelector('body').appendChild(h1);
-document.querySelector('body').appendChild(img);
+ReactDOM.render(appRouting, document.getElementById('root'));
